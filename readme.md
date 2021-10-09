@@ -4,6 +4,7 @@
  * @Author: 831901305 Mahuijuan   &   831901314 Huangzirui
  * @Content: A Bobing applet
  * @Tools:  Wechat developer tool(wxml, JavaScript) and Python
+ * 
  */
 
 Code specification: 
