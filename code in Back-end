@@ -1,0 +1,68 @@
+from collections import Counter, defaultdict
+import logging
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+records = defaultdict(list)
+
+
+@app.route('/')
+def get_all():
+    return jsonify(records)
+
+
+@app.route('/get_records')
+def get_records():
+    user_id = request.args.get('user_id')
+    if user_id in records:
+        data = [item["pick"] for item in records[user_id]]
+    else:
+        data = []
+    logging.info(f'get records, user_id={user_id}, response={data}')
+    return jsonify(data)
+
+
+@app.route('/set_record', methods=["post"])
+def set_record():
+    data = request.json
+    user_id = data.get('user_id')
+    record = data.get('record')
+    record = [val + 1 for val in record]  # 为处理前端发来的骰子点数是 0～5 的情况
+    status = 'failed'
+    logging.info(f'set record, user_id={user_id}, record={record}')
+    if user_id is not None and record:
+        user_id = str(user_id)
+        pick = convert_record_to_pick(record)
+        logging.info(f'pick={pick}')
+        if pick != "":
+            records[user_id].append({"record": record, "pick": pick})
+            records[user_id] = records[user_id][-5:]
+            status = 'success'
+    return jsonify({'status': status})
+
+
+def convert_record_to_pick(record):
+    counter = Counter(record)
+    if counter.get(2, 0) >= 5:
+        return "First Pick"
+    elif counter.get(2, 0) == 4:
+        return "Fourth Pick"
+    elif counter.get(4, 0) >= 4:
+        return "First Pick"
+    elif counter.get(4, 0) == 3:
+        return "Third Pick"
+    elif counter.get(4, 0) == 2:
+        return "Fifth Pick"
+    elif counter.get(4, 0) == 1:
+        if set(record) == {1, 2, 3, 4, 5, 6}:
+            return "Second Pick"
+        else:
+            return "Sixth Pick"
+    else:
+        return "Thank you!"
+    return ""
+
+
+if __name__ == '__main__':
+    app.run(port='9999')
