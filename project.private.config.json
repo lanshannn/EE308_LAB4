@@ -1,0 +1,71 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/0_enter/enter",
+          "pathName": "pages/0_enter/enter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/results/1/1",
+          "pathName": "pages/results/1/1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/2_startpage/startpage",
+          "pathName": "pages/2_startpage/startpage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/results/1/1",
+          "pathName": "pages/results/1/1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/3_startpage/3_startpage",
+          "pathName": "pages/3_startpage/3_startpage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/4_startpage/4_startpage",
+          "pathName": "pages/4_startpage/4_startpage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/5_record/record",
+          "pathName": "pages/5_record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/1_rule/rule",
+          "pathName": "pages/1_rule/rule",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/5_record/record",
+          "pathName": "pages/5_record/record",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

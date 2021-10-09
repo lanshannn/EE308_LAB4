@@ -1,0 +1,40 @@
+<!--pages/4_startpage/4_startpage.wxml-->
+<view class="container" >
+    <image  src="https://s3.bmp.ovh/imgs/2021/10/bfce4bb7fa545ec8.jpg" class="container" mode="scaleToFill"></image> <!--碗的背景-->
+
+    <!-- click button -->
+    <image class="startButton" wx:if="{{hideRecord}}" bindtap="click" style="width:180rpx; height: 180rpx;" src="{{button}}" mode="aspectFit"></image>
+    <navigator class="startButton" wx:if="{{!hideRecord}}" bindtap="clicked" url="../5_record/record?out={{sixTonesUser}}">
+    <image style="width:180rpx; height: 180rpx;" src="https://s3.bmp.ovh/imgs/2021/10/e9a5477ce92a90b8.png " mode="aspectFit"></image></navigator>
+    <!-- place tones -->
+    <!-- computer player -->
+    <view class="tonesComputer" style="display:{{hiddenTones}}">
+            <view>
+                <text class="text" style="top: -6% "> Random order : {{order[index]}}</text>
+                <text class="text" style="top: -6%; left: 1% " wx:for="{{order}}">{{item}}</text>
+                <view class="text" style="color: rgb(250, 82, 82); top: -5% ">{{counter}} Chances</view>
+                <text class="text">Player1: </text>
+                <image wx:for="sixTonesComputerPlayer_1" style="width: 90rpx; height: 90rpx; z-index: 15" src="{{tonesout[sixTonesComputerPlayer_1[index]]}}" mode="aspectFit"></image>
+            </view>
+            <view class="tones_2">
+                <text class="text" style="z-index: 11; top: -100%">Player2: </text>
+                <image wx:for="sixTonesComputerPlayer_2" style="width: 90rpx; height: 90rpx;" src="{{tonesout[sixTonesComputerPlayer_2[index]]}}" mode="aspectFit"></image>
+            </view>
+            <view class="tones_3">
+                <text class="text" style="z-index: 11; top: -100%">Player3: </text>
+                <image wx:for="sixTonesComputerPlayer_3" style="width: 90rpx; height: 90rpx;" src="{{tonesout[sixTonesComputerPlayer_3[index]]}}" mode="aspectFit"></image>
+            </view>
+        </view>
+    
+    <!-- user -->
+    <view class="tones" style="display:{{hiddenTones}}">
+            <image class="tone_1" style="width: {{wise}};" src="{{tonesout[sixTonesUser[0]]}}" mode="aspectFit"></image>
+            <image class="tone_2" style="width: {{wise}};" src="{{tonesout[sixTonesUser[1]]}}" mode="aspectFit"></image>
+            <image class="tone_3" style="width: {{wise}};" src="{{tonesout[sixTonesUser[2]]}}" mode="aspectFit"></image>
+            <image class="tone_4" style="width: {{wise}};" src="{{tonesout[sixTonesUser[3]]}}" mode="aspectFit"></image>
+            <image class="tone_5" style="width: {{wise}};" src="{{tonesout[sixTonesUser[4]]}}" mode="aspectFit"></image>
+            <image class="tone_6" style="width: {{wise}};" src="{{tonesout[sixTonesUser[5]]}}" mode="aspectFit"></image>
+    </view>
+</view>
+
+

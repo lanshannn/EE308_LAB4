@@ -1,0 +1,27 @@
+/* pages/5_record/record.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.txt{
+  top: 35%;
+  left: 35%;
+  position: relative;
+  z-index: 1;
+}
+
+.again{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  position: relative;
+  top: 40%;
+
+  z-index: 10;
+}

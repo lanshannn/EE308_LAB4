@@ -1,0 +1,13 @@
+<!--pages/5_record/record.wxml-->
+<view class="container" >
+    <image  src="https://z3.ax1x.com/2021/10/08/5PM9sO.jpg" class="container" mode="scaleToFill"></image>
+    <view class="txt">
+      <text>⭐  History ⭐  </text>
+      <text wx:for="{{reslutFrompy}}">\n{{index+1}}.{{item}}</text>
+      <text> \n            </text>
+    </view>
+    <view class="again">
+      <image bindtap="toPrice" style="width: 120rpx" src="https://s3.bmp.ovh/imgs/2021/10/abee768fbf315851.png" mode="aspectFit"></image>
+      <image  bindtap="back" style="width: 120rpx" src="{{againAddress}}" mode="aspectFit"></image>
+    </view>
+</view>

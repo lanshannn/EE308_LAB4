@@ -1,0 +1,12 @@
+<view class="container">
+ <image class="container" bindtap="clicked" src="https://s3.bmp.ovh/imgs/2021/10/b105100acb4c7daf.jpg" mode="scaleToFill"></image>
+  <view class="t" wx:if="{{hide}}">
+    <text> CLICK the page </text>
+    <text style="color: rgb(250, 82, 82);"> \nRemind: only 5 turns for a round</text>
+  </view>
+  <view class="button" wx:if="{{hiddenChoose}}">
+    <button hover-class="hover" style="width: 250rpx; height: 70rpx; font-family: Gill Sans MT; font-size: 33rpx; top: -30rpx; " bindtap="clickButton_1" mode="scaleToFill">Two Players</button>
+    <button hover-class="hover" style="width: 250rpx; height: 70rpx; font-family: Gill Sans MT; font-size: 33rpx; top: -15rpx;" bindtap="clickButton_2" mode="scaleToFill">Three Players</button>
+    <button hover-class="hover" style="width: 250rpx; height: 70rpx; font-family: Gill Sans MT; font-size: 33rpx;" bindtap="clickButton_3" mode="scaleToFill">Four Players</button>
+  </view>
+</view> 

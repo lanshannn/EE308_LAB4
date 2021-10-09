@@ -1,0 +1,17 @@
+<!--pages/enter/enter.wxml-->
+<view class="container">
+    <image src="https://s3.bmp.ovh/imgs/2021/10/47d8ca0dd6cdb57c.jpg" class="container" ></image> <!--碗的背景-->
+    <image class="startButton" bindtap="clicked" style="height: 120rpx; width: 120rpx;" src="https://s3.bmp.ovh/imgs/2021/10/0c1518b696e981b9.png" mode="aspectFit"></image>
+</view>
+
+<view class="t" style="font-family: Fantasy; font-size: 20px">User: </view>
+<view style="display: flex; flex-direction: row;">
+<image class="headImg" style="height: 80rpx; width: 80rpx;" src="{{path}}" mode="aspectFit"></image>
+<view class="tt" style="font-weight:545;">
+    <text style="font-size: 17px; left: 20%">{{username}}\n\n</text>
+    <button bindtap="GetUserProfile" style="left: -80rpx; width: 290rpx; font-size: 9px; font-stretch: extra-condensed; top: -40rpx; z-index: 15">{{words}}</button>
+
+</view>
+</view>
+
+

@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/0_enter/enter",
+    "pages/1_rule/rule",
+    "pages/1_1award/1_1award",
+    "pages/2_startpage/startpage",
+    "pages/3_startpage/3_startpage",
+    "pages/4_startpage/4_startpage",
+    "pages/5_record/record"
+  ],
+  "window": {
+    "navigationBarTitleText": "Bo Bing🌕"
+  },
+  "sitemapLocation": "sitemap.json"
+}

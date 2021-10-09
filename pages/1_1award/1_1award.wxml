@@ -1,0 +1,6 @@
+<!--pages/1_1award/1_1award.wxml-->
+<navigator url="../1_rule/rule" open-type="redirect">
+<image class="container" src="https://s3.bmp.ovh/imgs/2021/10/70fc3a79bc8ce09a.jpg"  mode="scaleToFill"></image> 
+<view class="t">click to next page</view>
+</navigator>
+

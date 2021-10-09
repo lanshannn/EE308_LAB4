@@ -1,0 +1,40 @@
+<!--pages/startpage/startpage.wxml-->
+<tones></tones>
+<view class="container" >
+    
+    <image  src="https://s3.bmp.ovh/imgs/2021/10/26f57f2dfe7d3700.jpg" class="container" mode="scaleToFill" style="position: absolute; left: 0rpx; top: 0rpx"></image> <!--碗的背景-->
+    
+
+    <!-- click button -->
+    <image class="startButton" wx:if="{{hideRecord}}" bindtap="click" style="width:180rpx; height: 180rpx;" src="{{button}}" mode="aspectFit"></image>
+    <image class="startButton" wx:if="{{!hideRecord}}" bindtap="clicked" style="width:180rpx; height: 180rpx;" src="https://s3.bmp.ovh/imgs/2021/10/e9a5477ce92a90b8.png " mode="aspectFit"></image>
+
+    <!-- place tones -->
+    <!-- computer player -->
+        <view class="tonesComputer" style="display:{{hiddenTones}}">
+            <view>
+                <text class="text" style="top: -6% ">Random order :</text>
+                <text class="text" style="top: -6%; left: 1% " wx:for="{{order}}">{{item}}</text>
+                <view class="text" style="color: rgb(250, 82, 82); top: -4% ">{{counter}} Chances</view>
+                <text class="text">Player1: </text>
+                <image wx:for="sixTonesComputerPlayer" style="width: 90rpx; height: 90rpx; top: -10%; z-index: 35" src="{{tonesout[sixTonesComputerPlayer[index]]}}" mode="aspectFit"></image>
+            </view>
+        </view>
+    
+    <!-- user -->
+    <view class="tones" style="display:{{hiddenTones}}">
+            <image lazy-load="true" class="tone_1" style="width: {{wise}};" src="{{tonesout[sixTonesUser[0]]}}" mode="aspectFit"></image>
+            <image lazy-load="true" class="tone_2" style="width: {{wise}};" src="{{tonesout[sixTonesUser[1]]}}" mode="aspectFit"></image>
+            <image lazy-load="true" class="tone_3" style="width: {{wise}};" src="{{tonesout[sixTonesUser[2]]}}" mode="aspectFit"></image>
+            <image lazy-load="true" class="tone_4" style="width: {{wise}};" src="{{tonesout[sixTonesUser[3]]}}" mode="aspectFit"></image>
+            <image lazy-load="true" class="tone_5" style="width: {{wise}};" src="{{tonesout[sixTonesUser[4]]}}" mode="aspectFit"></image>
+            <image lazy-load="true" class="tone_6" style="width: {{wise}};" src="{{tonesout[sixTonesUser[5]]}}" mode="aspectFit"></image>
+    </view>
+
+   <!-- record button
+        <view class="left" style="display:{{hideRecord}}" >
+            <navigator target="self" url="/pages/5_record/record">
+            <image  style="width:{{wise}};height: {{high}};" src="https://s3.bmp.ovh/imgs/2021/10/e9a5477ce92a90b8.png " mode="aspectFit"></image>
+            </navigator>
+        </view> -->
+</view>
